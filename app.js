@@ -10,12 +10,12 @@ app.use(morgan('dev')); //invokes it - nr
 app.use(express.static('./public'));//app.use(express.static('public' 
 app.use(express.urlencoded({extended: false}));//has to be invoked middle w
 
-const PORT = 3001;
+const PORT = 3000;
 
 app.get('/', (req, res) => {
     res.send(layout(''));
 });
-app.listen(PORT, (req, res) => {
+app.listen(PORT, () => {
     console.log('hi')
     console.log('We are operating on 3001');
 });
